@@ -1,0 +1,7 @@
+{
+  "name": "Trianance Engineering Suite",
+  "description": "Premium industrial CAD design portal featuring AI-generated technical blueprints, scroll-driven interactive sections, and a high-performance engineering interface.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

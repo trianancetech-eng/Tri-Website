@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trianance | Precision Engineering Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #050505;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+      .bg-grid {
+        background-size: 50px 50px;
+        background-image: 
+          linear-gradient(to right, rgba(204, 255, 0, 0.03) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(204, 255, 0, 0.03) 1px, transparent 1px);
+      }
+      .font-mono {
+        font-family: 'JetBrains+Mono', monospace;
+      }
+      .text-outline {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+        color: transparent;
+      }
+      .marquee-container {
+        display: flex;
+        overflow: hidden;
+        user-select: none;
+      }
+      .marquee-content {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-around;
+        min-width: 100%;
+        animation: scroll 30s linear infinite;
+      }
+      @keyframes scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+      }
+      /* Enhanced Reveal Animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), 
+                    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform, opacity;
+      }
+      .reveal.reveal-left {
+        transform: translateX(-50px);
+      }
+      .reveal.reveal-right {
+        transform: translateX(50px);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translate(0, 0) !important;
+      }
+      @keyframes textWave {
+        0%, 100% { transform: translateY(0); opacity: 0.5; }
+        50% { transform: translateY(-2px); opacity: 1; }
+      }
+      .wave-char {
+        display: inline-block;
+        animation: textWave 2s ease-in-out infinite;
+      }
+      ::selection {
+        background: #ccff00;
+        color: #000;
+      }
+      ::-webkit-scrollbar {
+        width: 3px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ccff00;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js",
+    "firebase/": "https://esm.sh/firebase@^12.9.0/"
+  }
+}
+</script>
+  </head>
+  <body class="bg-grid">
+    <div id="root"></div>
+  </body>
+</html>
